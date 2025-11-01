@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Section principale du footer */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-t pt-12 border-gray-200 px-6 md:px-12">
           {/* Colonne 1 - Logo et description */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col max-md:items-center gap-6">
             <Link href="/" className="flex-shrink-0">
               <Image
                 src="/logo.png"
@@ -18,13 +18,13 @@ export default function Footer() {
                 className="h-auto w-auto"
               />
             </Link>
-            <p className="text-black text-base leading-relaxed max-w-xs">
+            <p className="text-black text-base leading-relaxed max-md:w-full md:max-w-xs">
               Un accompagnement solidaire, humain et inclusif – De la petite enfance à l'adolescence
             </p>
           </div>
 
           {/* Colonne 2 - Liens principaux */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col max-md:items-center gap-4">
             <Link
               href="/qui-sommes-nous"
               className="text-black hover:text-[#E6007E] transition-colors text-base"
@@ -104,7 +104,7 @@ export default function Footer() {
           </div>
 
           {/* Colonne 3 - Liens secondaires */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col max-md:items-center gap-4">
             <Link
               href="/politiques-de-confidentialites"
               className="text-black hover:text-[#E6007E] transition-colors text-base"
@@ -140,7 +140,7 @@ export default function Footer() {
 
         {/* Ligne de séparation */}
         <div className="border-t border-gray-200 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col max-md:items-center md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">
               © 2025 Dom'Enfance & Famille – Association loi 1901
             </p>

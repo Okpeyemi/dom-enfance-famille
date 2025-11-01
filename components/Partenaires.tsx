@@ -18,29 +18,31 @@ export default function Partenaires() {
         {/* Logos des partenaires */}
         <ScaleIn delay={0.2} duration={0.6}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 max-w-5xl mx-auto">
-          {/* Logo 1 - Allocations Familiales */}
+          {/* Logo 1 - Partenaire */}
           <div className="flex items-center justify-center p-4 bg-white">
-            <div className="w-full h-32 bg-[#1E88E5] flex items-center justify-center">
-              <div className="text-white text-center">
-                <div className="text-3xl font-bold mb-1">CAF</div>
-                <div className="text-xs uppercase tracking-wider">Allocations<br/>Familiales</div>
-              </div>
+            <div className="relative w-full h-32">
+              <Image
+                src="/partenaire-1.png"
+                alt="Partenaire 1"
+                fill
+                className="object-contain"
+              />
             </div>
           </div>
 
           {/* Logo 2 - Placeholder */}
           <div className="flex items-center justify-center p-4">
-            <div className="w-full h-32 bg-gray-300"></div>
+            <div className="w-32 h-32 bg-gray-300"></div>
           </div>
 
           {/* Logo 3 - Placeholder */}
           <div className="flex items-center justify-center p-4">
-            <div className="w-full h-32 bg-gray-300"></div>
+            <div className="w-32 h-32 bg-gray-300"></div>
           </div>
 
           {/* Logo 4 - Placeholder */}
           <div className="flex items-center justify-center p-4">
-            <div className="w-full h-32 bg-gray-300"></div>
+            <div className="w-32 h-32 bg-gray-300"></div>
           </div>
           </div>
         </ScaleIn>

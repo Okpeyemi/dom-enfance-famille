@@ -83,7 +83,7 @@ export default function Gouvernance() {
           <div className="flex justify-center mt-8">
             <button
               type="submit"
-              className="bg-[#1E88E5] text-white px-12 py-4 rounded-full font-bold text-2xl hover:bg-[#1976D2] transition-colors"
+              className="bg-[#1E88E5] max-md:w-full text-white px-12 py-4 rounded-full font-bold text-2xl hover:bg-[#1976D2] transition-colors"
             >
               Envoyer
             </button>

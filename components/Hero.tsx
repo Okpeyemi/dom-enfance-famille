@@ -6,11 +6,10 @@ import AnimatedLink from "./animations/AnimatedLink";
 
 export default function Hero() {
   return (
-    <section className="w-full bg-white">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="w-full bg-white py-8 md:py-12 lg:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Colonne gauche - Texte */}
-          <FadeIn direction="right" duration={0.8}>
             <div className="flex flex-col gap-8">
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -38,11 +37,9 @@ export default function Hero() {
                 Découvrir nos actions
               </AnimatedLink>
             </div>
-          </FadeIn>
 
           {/* Colonne droite - Image */}
-          <ScaleIn delay={0.3} duration={0.8}>
-            <div className="relative flex justify-center lg:justify-end">
+            <div className="relative hidden md:flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[700px] aspect-square">
               <Image
                 src="/hero-acceuil.png"
@@ -65,7 +62,6 @@ export default function Hero() {
               ></div>
             </div>
             </div>
-          </ScaleIn>
         </div>
       </div>
     </section>

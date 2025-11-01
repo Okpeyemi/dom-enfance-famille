@@ -23,7 +23,7 @@ export default function Actualites() {
   return (
     <div className="bg-white">
       <Hero />
-      <ArticlesList className="-mt-80" articles={articles} />
+      <ArticlesList className="md:-mt-80" articles={articles} />
       <Line />
       <ArticlesList articles={articles} />
       <Line />

@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import FadeIn from "../animations/FadeIn";
-import ScaleIn from "../animations/ScaleIn";
 
 export default function Hero() {
   const [formData, setFormData] = useState({
@@ -25,17 +23,14 @@ export default function Hero() {
   };
 
   return (
-    <section className="w-full bg-white py-16">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="w-full bg-white py-8 md:py-12 lg:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
         {/* Titre */}
-        <FadeIn direction="up" duration={0.6}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#E6007E] text-center mb-8">
             Contact
           </h1>
-        </FadeIn>
 
         {/* Informations de contact */}
-        <FadeIn direction="up" delay={0.2} duration={0.6}>
           <div className="text-center mb-12 space-y-2">
             <p className="text-black text-lg md:text-xl italic">
               Adresse : [À compléter – ex : Lotissement X, 971XX Ville]
@@ -47,12 +42,10 @@ export default function Hero() {
               Email : <a href="mailto:contact@domenfancefamille.fr" className="underline">contact@domenfancefamille.fr</a>
             </p>
           </div>
-        </FadeIn>
 
         {/* Grille formulaire et image */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Colonne gauche - Formulaire */}
-          <FadeIn direction="right" delay={0.3} duration={0.7}>
             <div>
             <h3 className="text-xl md:text-2xl font-normal text-black mb-6">
               Formulaire :
@@ -102,18 +95,17 @@ export default function Hero() {
               <div>
                 <button
                   type="submit"
-                  className="bg-[#1E88E5] text-white px-12 py-4 rounded-full font-bold text-2xl hover:bg-[#1976D2] transition-colors"
+                  className="bg-[#1E88E5] max-md:w-full text-white px-12 py-4 rounded-full font-bold text-2xl hover:bg-[#1976D2] transition-colors"
                 >
                   Envoyer
                 </button>
               </div>
             </form>
             </div>
-          </FadeIn>
+
 
           {/* Colonne droite - Image */}
-          <ScaleIn delay={0.4} duration={0.7}>
-            <div className="relative w-full h-[400px] lg:ml-auto">
+            <div className="relative hidden md:block w-full h-[400px] lg:ml-auto">
               <div 
                 className="relative w-full h-full overflow-hidden"
                 style={{
@@ -129,7 +121,6 @@ export default function Hero() {
                 />
               </div>
             </div>
-          </ScaleIn>
         </div>
       </div>
     </section>

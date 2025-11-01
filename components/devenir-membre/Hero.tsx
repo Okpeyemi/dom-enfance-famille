@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="w-full bg-white">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="w-full bg-white py-8 md:py-12 lg:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex justify-center items-center">
           {/* Image avec texte superposé */}
           <div className="relative w-full">
