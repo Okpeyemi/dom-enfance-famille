@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FadeIn from "../animations/FadeIn";
 
 interface Article {
   id: number;
@@ -19,20 +20,20 @@ export default function ArticlesList({ articles, className = "" }: ArticlesListP
       <div className="container mx-auto px-6 md:px-12">
         {/* Liste des articles */}
         <div className="space-y-12">
-          {articles.map((article) => (
-            <div
-              key={article.id}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-            >
-              {/* Image à gauche */}
-              <div className="relative w-full aspect-square max-w-md mx-auto">
-                <Image
-                  src={article.image}
-                  alt={article.titre}
-                  fill
-                  className="object-cover rounded-[50%]"
-                />
-              </div>
+          {articles.map((article, index) => (
+            <FadeIn key={article.id} direction="up" delay={index * 0.2} duration={0.6}>
+              <div
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+              >
+                {/* Image à gauche */}
+                <div className="relative w-full aspect-square max-w-md mx-auto">
+                  <Image
+                    src={article.image}
+                    alt={article.titre}
+                    fill
+                    className="object-cover rounded-[50%]"
+                  />
+                </div>
 
               {/* Texte à droite */}
               <div className="flex flex-col gap-4">
@@ -46,7 +47,8 @@ export default function ArticlesList({ articles, className = "" }: ArticlesListP
                   Voir plus →
                 </Link>
               </div>
-            </div>
+              </div>
+            </FadeIn>
           ))}
         </div>
       </div>

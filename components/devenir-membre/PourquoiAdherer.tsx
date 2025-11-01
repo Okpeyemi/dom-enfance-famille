@@ -1,16 +1,21 @@
 import Link from "next/link";
+import FadeIn from "../animations/FadeIn";
+import AnimatedLink from "../animations/AnimatedLink";
 
 export default function PourquoiAdherer() {
   return (
     <section className="w-full bg-white py-16">
       <div className="container mx-auto px-6 md:px-12">
         {/* Titre */}
-        <h2 className="text-4xl md:text-5xl font-bold text-[#1E88E5] text-center mb-12">
-          Pourquoi adhérer ?
-        </h2>
+        <FadeIn direction="up" duration={0.6}>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1E88E5] text-center mb-12">
+            Pourquoi adhérer ?
+          </h2>
+        </FadeIn>
 
         {/* Contenu */}
-        <div className="max-w-3xl mx-auto text-center space-y-6">
+        <FadeIn direction="up" delay={0.2} duration={0.6}>
+          <div className="max-w-3xl mx-auto text-center space-y-6">
           {/* Raisons */}
           <p className="text-black text-xl md:text-2xl font-bold leading-relaxed">
             Participer aux décisions (AG)
@@ -40,16 +45,17 @@ export default function PourquoiAdherer() {
 
           {/* Bouton */}
           <div className="mt-12">
-            <Link
+            <AnimatedLink
               href="https://www.helloasso.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#94C11F] text-white px-12 py-4 rounded-full font-bold text-2xl hover:bg-[#82a91b] transition-colors"
             >
               Adhérer en ligne (HelloAsso)
-            </Link>
+            </AnimatedLink>
           </div>
-        </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import { Margarine, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LoadingProvider from "@/components/LoadingProvider";
 
 const margarine = Margarine({
   weight: "400",
@@ -55,11 +56,13 @@ export default function RootLayout({
       <body
         className={`${margarine.variable} ${montserrat.variable} font-montserrat antialiased min-h-screen flex flex-col`}
       >
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <LoadingProvider>
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </LoadingProvider>
       </body>
     </html>
   );
