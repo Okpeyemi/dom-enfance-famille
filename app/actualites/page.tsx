@@ -2,6 +2,12 @@ import Hero from "@/components/actualites/Hero";
 import ArticlesList from "@/components/actualites/ArticlesList";
 import Line from "@/components/Line";
 import ReseauxSociaux from "@/components/actualites/ReseauxSociaux";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Actualités",
+  description: "Suivez les actualités, événements et ateliers de Dom'Enfance & Famille. Restez informé de nos actions en Guadeloupe.",
+};
 
 export default function Actualites() {
   const articles = [
