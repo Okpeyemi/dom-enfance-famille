@@ -54,7 +54,7 @@ export default function Header() {
           </Link>
 
           {/* Navigation Desktop */}
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-base xl:text-lg">
+          <nav className="hidden xl:flex items-center gap-4 xl:gap-6 text-base xl:text-lg">
           <Link
             href="/"
             className={getLinkClasses("/")}
@@ -104,7 +104,7 @@ export default function Header() {
           {/* Menu mobile (hamburger) */}
           <button 
             onClick={toggleMenu}
-            className="lg:hidden flex flex-col gap-1.5 p-2" 
+            className="xl:hidden flex flex-col gap-1.5 p-2" 
             aria-label="Menu"
             aria-expanded={isMenuOpen}
           >
@@ -132,7 +132,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white border-t border-gray-200 overflow-hidden"
+            className="xl:hidden bg-white border-t border-gray-200 overflow-hidden"
           >
             <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
               <Link

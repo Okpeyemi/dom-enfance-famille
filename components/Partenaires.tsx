@@ -52,13 +52,13 @@ export default function Partenaires() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
             <AnimatedLink
               href="/devis"
-              className="bg-[#E6007E] text-white px-10 py-4 rounded-full font-bold text-2xl hover:bg-[#c5006b] transition-colors"
+              className="bg-[#E6007E] text-white px-10 py-4 text-center rounded-full font-bold text-2xl hover:bg-[#c5006b] transition-colors"
             >
               Devis gratuit
             </AnimatedLink>
             <AnimatedLink
               href="/adherer"
-              className="bg-[#1E88E5] text-white px-10 py-4 rounded-full font-bold text-2xl hover:bg-[#0284c7] transition-colors"
+              className="bg-[#1E88E5] text-white px-10 py-4 text-center rounded-full font-bold text-2xl hover:bg-[#0284c7] transition-colors"
             >
               Adhérer / Bénévole
             </AnimatedLink>
@@ -72,7 +72,7 @@ export default function Partenaires() {
               href="https://www.helloasso.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#94C11F] text-white px-10 py-4 rounded-full font-bold text-2xl hover:bg-[#82a91b] transition-colors"
+              className="bg-[#94C11F] text-white px-10 py-4 text-center rounded-full font-bold text-2xl hover:bg-[#82a91b] transition-colors"
             >
               Faire un don (HelloAsso)
             </AnimatedLink>

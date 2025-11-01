@@ -1,6 +1,6 @@
 export default function Avantages() {
   return (
-    <section className="w-full bg-white py-16">
+    <section className="w-full bg-white py-16 px-4 sm:px-6 lg:px-12">
       <div className="container mx-auto">
         {/* Titre */}
         <h2 className="text-4xl md:text-5xl font-bold text-[#E6007E] text-center mb-12">
