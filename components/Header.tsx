@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,17 @@ export default function Header() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+
+  // Helper pour vérifier si le lien est actif
+  const isActive = (path: string) => pathname === path;
+
+  // Classes pour les liens actifs/inactifs
+  const getLinkClasses = (path: string) => {
+    const baseClasses = "transition-colors font-medium";
+    const activeClasses = "text-[#E6007E] font-bold";
+    const inactiveClasses = "text-black hover:text-[#E6007E]";
+    return `${baseClasses} ${isActive(path) ? activeClasses : inactiveClasses}`;
+  };
 
   return (
     <header 
@@ -44,37 +57,37 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-base xl:text-lg">
           <Link
             href="/"
-            className="text-black hover:text-[#E6007E] transition-colors font-medium"
+            className={getLinkClasses("/")}
           >
             Acceuil
           </Link>
           <Link
             href="/association"
-            className="text-black hover:text-[#E6007E] transition-colors font-medium"
+            className={getLinkClasses("/association")}
           >
             Association
           </Link>
           <Link
             href="/nos-actions"
-            className="text-black hover:text-[#E6007E] transition-colors font-medium"
+            className={getLinkClasses("/nos-actions")}
           >
             Nos actions
           </Link>
           <Link
             href="/devenir-membre"
-            className="text-black hover:text-[#E6007E] transition-colors font-medium"
+            className={getLinkClasses("/devenir-membre")}
           >
             Devenir membre
           </Link>
           <Link
             href="/actualites"
-            className="text-black hover:text-[#E6007E] transition-colors font-medium"
+            className={getLinkClasses("/actualites")}
           >
             Actualités
           </Link>
           <Link
             href="/contact"
-            className="text-black hover:text-[#E6007E] transition-colors font-medium"
+            className={getLinkClasses("/contact")}
           >
             Contact
           </Link>
@@ -125,42 +138,42 @@ export default function Header() {
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="text-black hover:text-[#E6007E] transition-colors font-medium text-lg py-2"
+                className={`${getLinkClasses("/")} text-lg py-2`}
               >
                 Acceuil
               </Link>
               <Link
                 href="/association"
                 onClick={closeMenu}
-                className="text-black hover:text-[#E6007E] transition-colors font-medium text-lg py-2"
+                className={`${getLinkClasses("/association")} text-lg py-2`}
               >
                 Association
               </Link>
               <Link
                 href="/nos-actions"
                 onClick={closeMenu}
-                className="text-black hover:text-[#E6007E] transition-colors font-medium text-lg py-2"
+                className={`${getLinkClasses("/nos-actions")} text-lg py-2`}
               >
                 Nos actions
               </Link>
               <Link
                 href="/devenir-membre"
                 onClick={closeMenu}
-                className="text-black hover:text-[#E6007E] transition-colors font-medium text-lg py-2"
+                className={`${getLinkClasses("/devenir-membre")} text-lg py-2`}
               >
                 Devenir membre
               </Link>
               <Link
                 href="/actualites"
                 onClick={closeMenu}
-                className="text-black hover:text-[#E6007E] transition-colors font-medium text-lg py-2"
+                className={`${getLinkClasses("/actualites")} text-lg py-2`}
               >
                 Actualités
               </Link>
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="text-black hover:text-[#E6007E] transition-colors font-medium text-lg py-2"
+                className={`${getLinkClasses("/contact")} text-lg py-2`}
               >
                 Contact
               </Link>
